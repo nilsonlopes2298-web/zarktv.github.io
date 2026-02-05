@@ -16,9 +16,8 @@
       --accent:#ff8a00;
       --text:#ffffff;
       --muted:rgba(255,255,255,.9);
-      --card:#0b0b0c;
-      --border:rgba(255,255,255,.10);
       --shadow:0 14px 26px rgba(0,0,0,.22);
+      --border:rgba(255,255,255,.10);
     }
     *{box-sizing:border-box}
     body{
@@ -27,99 +26,133 @@
       background: linear-gradient(180deg,var(--bg1),var(--bg2));
       color:var(--text);
     }
-    .wrap{max-width:480px;margin:auto;padding:16px 14px 42px;}
+    .wrap{max-width:520px;margin:auto;padding:16px 14px 56px;}
 
     .hero{position:relative;border-radius:22px;overflow:hidden;box-shadow:var(--shadow);}
-    .hero img{width:100%;height:190px;object-fit:cover;}
-    .heroOverlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.1),rgba(0,0,0,.65));}
-    .heroText{position:absolute;left:14px;right:14px;bottom:12px;display:flex;justify-content:space-between;align-items:flex-end;}
-    .heroTitle{font-weight:900;font-size:18px;}
-    .heroSub{font-size:13px;margin-top:6px;}
-    .heroCTA{background:var(--accent);color:#160a1f;border-radius:999px;padding:10px 14px;font-weight:900;text-decoration:none;}
+    .hero img{width:100%;height:190px;object-fit:cover;display:block;}
+    .heroOverlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.10),rgba(0,0,0,.68));}
+    .heroText{position:absolute;left:14px;right:14px;bottom:12px;display:flex;justify-content:space-between;align-items:flex-end;gap:10px;}
+    .heroTitle{font-weight:900;font-size:18px;line-height:1.1;}
+    .heroSub{font-size:13px;margin-top:6px;opacity:.95;}
+    .heroCTA{background:var(--accent);color:#160a1f;border-radius:999px;padding:10px 14px;font-weight:900;text-decoration:none;white-space:nowrap;}
 
     .avatarWrap{display:flex;justify-content:center;margin-top:-36px;}
     .avatar{width:78px;height:78px;border-radius:50%;overflow:hidden;border:4px solid rgba(0,0,0,.35);box-shadow:var(--shadow);}
-    .avatar img{width:100%;height:100%;object-fit:cover;}
+    .avatar img{width:100%;height:100%;object-fit:cover;display:block;}
 
     h1{text-align:center;margin:10px 0 4px;font-size:24px;font-weight:900;}
-    .subtitle{text-align:center;font-size:13.5px;color:var(--muted);margin-bottom:14px;}
+    .subtitle{text-align:center;font-size:13.5px;color:var(--muted);margin-bottom:14px;line-height:1.35;}
 
     .list{display:flex;flex-direction:column;gap:12px;}
-    .item{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;background:#000;border-radius:999px;text-decoration:none;color:#fff;box-shadow:var(--shadow);}
-    .label{font-weight:700;}
+    .item{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;background:#000;border-radius:999px;text-decoration:none;color:#fff;box-shadow:var(--shadow);border:1px solid var(--border);}
+    .label{font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:420px;}
 
-    .big{background:linear-gradient(135deg,#000,#222);border-radius:26px;padding:18px;text-align:center;}
-    .big h2{margin:0;font-size:28px;font-weight:900;}
-    .big span{font-size:12px;letter-spacing:3px;color:var(--accent);}
-    .big a{display:block;margin-top:14px;background:#000;padding:14px;border-radius:999px;text-decoration:none;color:#fff;font-weight:700;}
+    .big{background:linear-gradient(135deg,#000,#1b1b1b);border-radius:26px;padding:18px;text-align:center;box-shadow:var(--shadow);border:1px solid var(--border);}
+    .big h2{margin:0;font-size:28px;font-weight:900;letter-spacing:1px;}
+    .big span{font-size:12px;letter-spacing:3px;color:var(--accent);font-weight:900;}
+    .big a{display:block;margin-top:14px;background:#000;padding:14px;border-radius:999px;text-decoration:none;color:#fff;font-weight:800;border:1px solid var(--border);}
 
-    .hint{text-align:center;font-size:13px;margin-top:10px;}
+    .section{text-align:center;font-size:12px;letter-spacing:2px;font-weight:900;opacity:.9;margin-top:8px;margin-bottom:-2px;}
+    .hint{text-align:center;font-size:13px;margin-top:10px;opacity:.95;}
 
-    .fab{position:fixed;right:16px;bottom:16px;width:58px;height:58px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;text-decoration:none;font-weight:900;color:#000;}
+    .fab{position:fixed;right:16px;bottom:16px;width:58px;height:58px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;text-decoration:none;font-weight:900;color:#160a1f;box-shadow:0 16px 30px rgba(0,0,0,.30);}
   </style>
 </head>
 
 <body>
   <div class="wrap">
 
-    <section class="hero">
-      <img src="banner.jpg">
-      <div class="heroOverlay"></div>
-      <div class="heroText">
-        <div>
-          <div class="heroTitle">📺 Filmes, Séries e Canais</div>
-          <div class="heroSub">✅ Plano mensal e fácil de usar</div>
-        </div>
-        <a class="heroCTA" href="https://wa.me/5585987890473">FALE COM A GENTE</a>
-      </div>
-    </section>
+    
 
     <div class="avatarWrap">
-      <div class="avatar"><img src="logo.png"></div>
+      <div class="avatar"><img src="logo.png" alt="ZarkTV"></div>
     </div>
 
     <h1>ZarkTV Oficial</h1>
     <div class="subtitle">
-      Aplicativos oficiais para TV e celular com suporte via WhatsApp.
+      Aplicativos oficiais para TV e celular com suporte via WhatsApp.<br>
+      Abaixo deixei <b>os links do Maik (AndradeMaster)</b> + <b>os seus links ZarkTV</b>.
     </div>
 
     <div class="list">
-
-      <a class="item" href="https://bapp.si/UTILITARIOS/Downloader_1.4.4.apk">
+      <div class="section">LINKS DO MAIK (ANDRADEMASTER)</div>
+      <a class="item" href="https://bapp.si/UTILITARIOS/Downloader_1.4.4.apk" target="_blank" rel="noopener">
         <div class="label">Downloader 1.4.4</div> ⋮
+      </a>
+      <a class="item" href="https://api.whatsapp.com/send?phone=5575992055678" target="_blank" rel="noopener">
+        <div class="label">WhatsApp SUPORTE</div> ⋮
       </a>
 
       <div class="big">
         <h2>ZARKTV</h2>
         <span>ATENDIMENTO</span>
-        <a href="https://wa.me/5585987890473">ZarkTV • Atendimento WhatsApp</a>
+        <a href="https://wa.me/5585987890473" target="_blank" rel="noopener">ZarkTV • Atendimento WhatsApp</a>
       </div>
 
-      <a class="item" href="http://aftv.news/5087480">
-        <div class="label">ZarkTV Android TV (App Oficial)</div> ⋮
+      <a class="item" href="https://aftv.news/5087480" target="_blank" rel="noopener">
+        <div class="label">UNITV ANDROID TV 4.16.1</div> ⋮
+      </a>
+      <a class="item" href="https://baixa.app/unitvcelular" target="_blank" rel="noopener">
+        <div class="label">UNITV CELULAR ANDROID</div> ⋮
+      </a>
+      <a class="item" href="https://www.uvweb.net/" target="_blank" rel="noopener">
+        <div class="label">UNITV WEB PC</div> ⋮
+      </a>
+      <a class="item" href="https://aftv.news/1347832" target="_blank" rel="noopener">
+        <div class="label">YouCine oficial</div> ⋮
+      </a>
+      <a class="item" href="https://bit.ly/app_bemtv" target="_blank" rel="noopener">
+        <div class="label">Bem TV</div> ⋮
+      </a>
+      <a class="item" href="https://aftv.news/4891230" target="_blank" rel="noopener">
+        <div class="label">UV LAUNCHER BTV</div> ⋮
+      </a>
+      <a class="item" href="https://aftv.news/3624812" target="_blank" rel="noopener">
+        <div class="label">Alice Launcher</div> ⋮
+      </a>
+      <a class="item" href="https://aftv.news/8405388" target="_blank" rel="noopener">
+        <div class="label">Wolf Launcher FireTv</div> ⋮
+      </a>
+      <a class="item" href="https://play.google.com/store/apps/details?id=com.ultrastream.ultraxcplayer&pcampaignid=web_share&pli=1" target="_blank" rel="noopener">
+        <div class="label">Ultra XP IPTV Player - Android</div> ⋮
+      </a>
+      <a class="item" href="https://templat.xyz/XTV_oficial.apk" target="_blank" rel="noopener">
+        <div class="label">Xuper TV Espanhol</div> ⋮
+      </a>
+      <a class="item" href="https://apps.apple.com/br/app/smarters-player-lite/id1628995509" target="_blank" rel="noopener">
+        <div class="label">Smarters Player Lite IOS 1.3.0</div> ⋮
+      </a>
+      <a class="item" href="https://www.iptvsmarters.com/IPTVSmartersProSetup-1.1.2.exe" target="_blank" rel="noopener">
+        <div class="label">IPTV Smarters ProSetup 1.1.2 PC</div> ⋮
+      </a>
+      <a class="item" href="https://aftv.news/1674933" target="_blank" rel="noopener">
+        <div class="label">YOUTUBE PARA TV BOX</div> ⋮
       </a>
 
-      <a class="item" href="https://baixa.app/unitvcelular">
-        <div class="label">ZarkTV Celular Android (App Oficial)</div> ⋮
+      <div class="section">LINKS ZARKTV (SEUS)</div>
+      <a class="item" href="https://bapp.si/UTILITARIOS/Downloader_1.4.4.apk" target="_blank" rel="noopener">
+        <div class="label">Downloader 1.4.4 (APK)</div> ⋮
       </a>
-
-      <a class="item" href="http://aftv.news/1674933">
-        <div class="label">ZarkTV Android TV (Alternativo)</div> ⋮
+      <a class="item" href="http://aftv.news/5087480" target="_blank" rel="noopener">
+        <div class="label">ZarkTV Android TV (código 5087480)</div> ⋮
       </a>
-
-      <a class="item" href="https://apps.apple.com/br/app/smarters-player-lite/id1628995509">
-        <div class="label">iPhone / iOS – Smarters Player</div> ⋮
+      <a class="item" href="https://baixa.app/unitvcelular" target="_blank" rel="noopener">
+        <div class="label">ZarkTV Celular Android</div> ⋮
       </a>
-
-      <a class="item" href="http://aftv.news/733751">
+      <a class="item" href="http://aftv.news/1674933" target="_blank" rel="noopener">
+        <div class="label">ZarkTV Android TV (código 1674933)</div> ⋮
+      </a>
+      <a class="item" href="https://apps.apple.com/br/app/smarters-player-lite/id1628995509" target="_blank" rel="noopener">
+        <div class="label">iPhone/iPad (Smarters Player Lite)</div> ⋮
+      </a>
+      <a class="item" href="http://aftv.news/733751" target="_blank" rel="noopener">
         <div class="label">App Play – Código Downloader 733751</div> ⋮
       </a>
 
       <div class="hint">📌 No Downloader, utilize o código <b>733751</b></div>
     </div>
-
   </div>
 
-  <a class="fab" href="https://wa.me/5585987890473">WA</a>
+  <a class="fab" href="https://wa.me/5585987890473" target="_blank" rel="noopener">WA</a>
 </body>
 </html>
